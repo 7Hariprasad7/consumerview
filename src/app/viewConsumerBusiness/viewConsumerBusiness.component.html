@@ -1,0 +1,74 @@
+<p>View Consumer Business</p>
+<form #consumerForm="ngForm" (ngSubmit)="viewConsumerBusiness(consumerId,businessId)">
+  <div class="form-group">
+      <label for="consumerId">Consumer Id : </label>
+      <input type="text" class="form-control" id="consumerId" name="consumerId" [(ngModel)]="consumerId" required>
+  </div>
+  <div class="form-group">
+      <label for="businessId">Business Id : </label>
+      <input type="text" class="form-control" id="businessId" name="businessId" [(ngModel)]="businessId" required>
+  </div>
+  <input type="submit" value="Submit"  >
+</form>
+<table class="table" [hidden]="flag">
+  <caption><strong>Consumer Business Details</strong></caption>
+  <tbody>
+    <tr>
+      <td><strong>Consumer ID </strong></td>
+      <td>{{consumerBusiness.consumerId}}</td>
+    </tr>
+    <tr>
+      <td><strong>Consumer Name </strong></td>
+      <td>{{consumerBusiness.consumerName}}</td>
+    </tr>
+    <tr>
+      <td><strong>Email </strong></td>
+      <td>{{consumerBusiness.email}}</td>
+    </tr>
+    <tr>
+      <td><strong>PAN </strong></td>
+      <td>{{consumerBusiness.pan}}</td>
+    </tr>
+    <tr>
+      <td><strong>Agent ID </strong></td>
+      <td>{{consumerBusiness.agentId}}</td>
+    </tr>
+    <tr>
+      <td><strong>Agent Name </strong></td>
+      <td>{{consumerBusiness.agentName}}</td>
+    </tr>
+    <tr>
+      <td><strong>Business ID </strong></td>
+      <td>{{consumerBusiness.businessId}}</td>
+    </tr>
+
+    <tr>
+      <td><strong>Validity Of Consumer </strong></td>
+      <td>{{consumerBusiness.validityofConsumer}}</td>
+    </tr>
+    <tr>
+      <td><strong>Business Overview </strong></td>
+      <td>{{consumerBusiness.businessOverview}}</td>
+    </tr>
+    <tr>
+      <td><strong>Business Type </strong></td>
+      <td>{{consumerBusiness.businessType}}</td>
+    </tr>
+    <tr>
+      <td><strong>Annual Turnover </strong></td>
+      <td>{{consumerBusiness.annualTurnOver}}</td>
+    </tr>
+    <tr>
+      <td><strong>Total Employees </strong></td>
+      <td>{{consumerBusiness.totalEmployees}}</td>
+    </tr>
+    <tr>
+      <td><strong>Capital Invested </strong></td>
+      <td>{{consumerBusiness.capitalInvested}}</td>
+    </tr>
+    <tr>
+      <td><strong>Business Value </strong></td>
+      <td>{{consumerBusiness.businessValue}}</td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,57 @@
+<p>View Consumer Property</p>
+<form #consumerForm="ngForm" (ngSubmit)="viewConsumerProperty(consumerId,propertyId)">
+  <div class="form-group">
+      <label for="consumerId">Consumer Id : </label>
+      <input type="text" class="form-control" id="consumerId" name="consumerId" [(ngModel)]="consumerId" required>
+  </div>
+  <div class="form-group">
+      <label for="businessId">Property Id : </label>
+      <input type="text" class="form-control" id="businessId" name="businessId" [(ngModel)]="propertyId" required>
+  </div>
+  <input type="submit" value="Submit"  >
+</form>
+<table class="table" [hidden]="flag">
+  <caption><strong>Consumer Property Details</strong></caption>
+  <tbody>
+    <tr>
+      <td><strong>Consumer ID </strong></td>
+      <td>{{consumerProperty.consumerId}}</td>
+    </tr>
+    <tr>
+      <td><strong>Property ID </strong></td>
+      <td>{{consumerProperty.propertyId}}</td>
+    </tr>
+    <tr>
+      <td><strong>Building Area (sqft)  </strong></td>
+      <td>{{consumerProperty.buildingSqft}}</td>
+    </tr>
+    <tr>
+      <td><strong>Building Type </strong></td>
+      <td>{{consumerProperty.buildingType}}</td>
+    </tr>
+    <tr>
+      <td><strong>Building Storeys </strong></td>
+      <td>{{consumerProperty.buildingStoreys}}</td>
+    </tr>
+    <tr>
+      <td><strong>Building Age </strong></td>
+      <td>{{consumerProperty.buildingAge}}</td>
+    </tr>
+    <tr>
+      <td><strong>Cost Of Asset </strong></td>
+      <td>{{consumerProperty.costOfTheAsset}}</td>
+    </tr>
+    <tr>
+      <td><strong>Salvage Value </strong></td>
+      <td>{{consumerProperty.salvageValue}}</td>
+    </tr>
+    <tr>
+      <td><strong>Useful Life Of The Asset</strong></td>
+      <td>{{consumerProperty.usefulLifeOfTheAsset}}</td>
+    </tr>
+    <tr>
+      <td><strong>Property Value </strong></td>
+      <td>{{consumerProperty.propertyValue}}</td>
+    </tr>
+  </tbody>
+</table>

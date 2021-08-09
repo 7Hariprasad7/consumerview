@@ -1,0 +1,49 @@
+<p>View Policy</p>
+<form #consumerForm="ngForm" (ngSubmit)="viewPolicy(consumerId,policyId)">
+  <div class="form-group">
+      <label for="consumerId">Consumer Id : </label>
+      <input type="text" class="form-control" id="consumerId" name="consumerId" [(ngModel)]="consumerId" required>
+  </div>
+  <div class="form-group">
+      <label for="businessId">Policy Id : </label>
+      <input type="text" class="form-control" id="businessId" name="businessId" [(ngModel)]="policyId" required>
+  </div>
+  <input type="submit" value="Submit"  >
+</form>
+<table class="table" [hidden]="flag">
+  <caption><strong>Policy Details</strong></caption>
+  <tbody>
+    <tr>
+      <td><strong>Consumer ID </strong></td>
+      <td>{{consumerPolicy.consumerId}}</td>
+    </tr>
+    <tr>
+      <td><strong>Business ID </strong></td>
+      <td>{{consumerPolicy.businessId}}</td>
+    </tr>
+    <tr>
+      <td><strong>Policy ID  </strong></td>
+      <td>{{consumerPolicy.policyId}}</td>
+    </tr>
+    <tr>
+      <td><strong>Accepted Quotes </strong></td>
+      <td>{{consumerPolicy.acceptedQuotes}}</td>
+    </tr>
+    <tr>
+      <td><strong>Policy Status </strong></td>
+      <td>{{consumerPolicy.policyStatus}}</td>
+    </tr>
+    <tr>
+      <td><strong>Payment Details </strong></td>
+      <td>{{consumerPolicy.paymentDetails}}</td>
+    </tr>
+    <tr>
+      <td><strong>Acceptance Status </strong></td>
+      <td>{{consumerPolicy.acceptanceStatus}}</td>
+    </tr>
+    <tr>
+      <td><strong>Effective Date </strong></td>
+      <td>{{consumerPolicy.effectiveDate}}</td>
+    </tr>
+  </tbody>
+</table>
