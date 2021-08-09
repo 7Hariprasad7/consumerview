@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-
-const routes: Routes = [];
+import { ConsumerComponent } from './consumer/consumer.component';
+const routes: Routes = [{path:'view',component:ConsumerComponent}];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

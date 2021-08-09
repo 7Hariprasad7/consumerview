@@ -1,0 +1,19 @@
+<p>View Consumer</p>
+<form #consumerForm="ngForm" (ngSubmit)="viewConsumerBusiness(consumerId,businessId)">
+  <div class="form-group">
+      <label for="consumerId">Consumer Id : </label>
+      <input type="text" class="form-control" id="consumerId" name="consumerId" [(ngModel)]="consumerId" required>
+  </div>
+  <div class="form-group">
+      <label for="businessId">Business Id : </label>
+      <input type="text" class="form-control" id="businessId" name="businessId" [(ngModel)]="businessId" required>
+  </div>
+  <input type="submit" value="Submit">
+</form>
+<div class="block">
+
+  <strong>Consumer Business</strong><br>
+
+  <pre>{{consumerBusiness | json }}</pre>
+
+</div>
